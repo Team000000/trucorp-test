@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  trucorp-web-2.0:
+    container_name: trucorp-web-2.0
+    build: ./php_files
+    ports:
+      - 6000:80
+    depends_on:
+      - trucorp-db-2.0
+  trucorp-db-2.0:
+    container_name: trucorp-db-2.0
+    build: ./sql_files
+    ports:
+      - 9906:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"

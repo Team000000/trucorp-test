@@ -1,10 +1,10 @@
-CREATE USER 'team0'@'%' IDENTIFIED BY 'team0';
-
-GRANT ALL PRIVILEGES ON *.* TO 'team0'@'%';
-
 CREATE DATABASE Trucorp;
 
 USE Trucorp;
+
+CREATE USER 'team0'@'%' IDENTIFIED BY 'team0';
+
+GRANT ALL PRIVILEGES ON *.* TO 'team0'@'%';
 
 FLUSH PRIVILEGES;
 
